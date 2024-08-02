@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchner Tammy Johnbull - Front-End Developer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>K</text></svg>">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-style: italic;
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 1.5em;
+            font-style: italic;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(-20px) rotate(-10deg);
+            animation: logoAnimate 1s ease-out forwards;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #666;
+            margin: 20px auto;
+            display: block;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInScale 1s ease-out forwards;
+            animation-delay: 0.5s;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #666;
+            font-style: italic;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-style: italic;
+            transition: background-color 0.3s ease;
+        }
+        .skill:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-style: italic;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: 3.5s;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            transition: opacity 0.3s ease;
+        }
+        .social-links a:hover img {
+            opacity: 0.7;
+        }
+        .contact-info a {
+            color: #666;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: #333;
+        }
+        .github-link {
+            display: flex;
+            align-items: center;
+            font-size: 1.1em;
+            color: #333;
+            text-decoration: none;
+        }
+        .github-link img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes logoAnimate {
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">JB.K</div>
+        <h1>Kitchner Tammy Johnbull</h1>
+        <p>Front-End Developer | Problem Solver | Critical Thinker</p>
+    </header>
+
+    <!-- Profile Picture -->
+    <img src="./images/kitchner.jpg" alt="Kitchner Tammy Johnbull" class="profile-pic">
+
+    <div class="container">
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! I'm Kitchner Tammy Johnbull, a graduate of AE FUNAI with a BSc in Computer Science. I may not be the smartest, but I'm a determined problem solver and critical thinker. I specialize in front-end development with a solid foundation in HTML, CSS, Tailwind CSS, React JS, and JavaScript. My focus is on creating responsive, user-friendly, and visually appealing websites.</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skill-list">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">Tailwind CSS</div>
+                <div class="skill">React JS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Git</div>
+                <div class="skill">Responsive Design</div>
+                <div class="skill">Cross-Browser Compatibility</div>
+                <div class="skill">Problem Solving</div>
+                <div class="skill">Critical Thinking</div>
+                <div class="skill">Information Gathering / Research Analyst</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <p>I have worked on several projects, both individually and in teams, where I developed web applications and websites using the latest front-end technologies. My experience ranges from building simple landing pages to complex, dynamic web applications.</p>
+            <p>Here are some highlights of my work:</p>
+            <ul>
+                <li>Developed responsive websites for small businesses, ensuring optimal performance across various devices and browsers.</li>
+                <li>Implemented interactive user interfaces with React JS and integrated APIs for dynamic content.</li>
+                <li>Styled web components with Tailwind CSS for clean and efficient design implementation.</li>
+                <li>Collaborated with backend developers and designers to create cohesive and functional web applications.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out to me:</p>
+            <ul class="contact-info">
+                <li>Phone: +2349055948626</li>
+                <li>Email: <a href="mailto:kittchnerbullswork@gmail.com">kittchnerbullswork@gmail.com</a></li>
+                <li><a href="https://github.com/Johnbullkitchner1" class="github-link">
+                    <img src="./images/icons/github.png" alt="GitHub">
+                    GitHub
+                </a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Hobbies & Interests</h2>
+            <p>In my free time, I enjoy playing football, tennis, and video games. These activities help me stay active and unwind after a day of coding.</p>
+        </section>
+
+        <section>
+            <h2>Connect with Me</h2>
+            <div class="social-links">
+                <a href="https://instagram.com/kitchneer" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/kitchneer" target="_blank">
+                    <img src="./images/icons/twitter-logo-2429.png" alt="Twitter (X)">
+                </a>
+                <a href="https://wa.me/2349055948626" target="_blank">
+                    <img src="./images/icons/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kitchner Tammy Johnbull</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('fade-in');
+            observer.observe(section);
+        });
+    });
+    </script>
+</body>
+</html>
